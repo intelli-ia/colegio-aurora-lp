@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@theme inline {
+  --font-barlow: 'Barlow, sans-serif';
+  --font-inter: 'Inter, sans-serif';
+
+  /* você pode definir também cores aqui como variáveis CSS, se quiser */
+  --color-primary: #00B8D9;
+  --color-primary-dark: #00A6BF;
+  --color-accent: #FFD966;
+  --color-highlight: #FF6B6B;
+  --color-highlight-light: #FFE0E0;
+  --color-gray-900: #1C1C1C;
+  --color-gray-700: #4B4B4B;
+  --color-gray-100: #F5F5F5;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+}
+
+
+body {
+  background: #ffffff;
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+@layer utilities {
+  .font-title {
+    font-family: var(--font-inter), sans-serif;
+  }
+  .font-text {
+    font-family: var(--font-inter), sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
