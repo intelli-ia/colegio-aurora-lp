@@ -26,7 +26,7 @@ const etapas = [
 
 export default function PorQueAurora() {
   return (
-    <section className="py-20 md:py-32 bg-[#060606]">
+    <section className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6 md:px-16">
         {/* Header */}
         <motion.div
@@ -36,11 +36,11 @@ export default function PorQueAurora() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14 md:mb-20"
         >
-          <h2 className="font-title text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+          <h2 className="font-title text-3xl md:text-4xl lg:text-5xl font-bold text-[#1C1C1C] leading-tight mb-4">
             Por que escolher o
-            <span className="text-[#3FAEBC]"> Aurora do Saber?</span>
+            <span className="text-[#3FAEBC]"> Aurora?</span>
           </h2>
-          <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#4B4B4B] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Porque conosco as etapas de ensino são totalmente personalizadas para o momento adequado dos nossos alunos:
           </p>
         </motion.div>
@@ -54,10 +54,10 @@ export default function PorQueAurora() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-5%" }}
               transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
-              className="rounded-2xl border border-white/8 bg-gradient-to-br from-white/[0.05] to-white/[0.02] p-8 md:p-10 hover:border-[#3FAEBC]/25 transition-colors duration-300"
+              className="rounded-2xl border border-[#1C1C1C]/8 bg-gradient-to-br from-gray-50 to-white p-8 md:p-10 hover:border-[#3FAEBC]/40 transition-colors duration-300"
             >
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="font-title font-bold text-white text-xl md:text-2xl">
+                <span className="font-title font-bold text-[#1C1C1C] text-xl md:text-2xl">
                   {item.tag}
                 </span>
                 {item.subtag && (
@@ -66,7 +66,7 @@ export default function PorQueAurora() {
                   </span>
                 )}
               </div>
-              <p className="text-white/60 text-base md:text-lg leading-relaxed">
+              <p className="text-[#4B4B4B] text-base md:text-lg leading-relaxed">
                 {item.descricao}
               </p>
             </motion.div>

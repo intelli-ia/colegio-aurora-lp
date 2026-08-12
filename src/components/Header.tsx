@@ -54,11 +54,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
           <Image
-            src="/Aurora-Site-4.png"
+            src="/aurora-logo.png"
             alt="Logo Colégio Aurora"
             width={34}
             height={34}
-            className="rounded-full border border-white/40 shadow transition-transform duration-300 group-hover:scale-105"
+            className="transition-transform duration-300 group-hover:scale-105"
           />
           <span className={`font-title font-bold text-base tracking-wide transition-colors duration-300 ${lightBg ? "text-[#0164A4]" : "text-white"}`}>
             Colégio Aurora
