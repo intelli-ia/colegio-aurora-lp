@@ -20,17 +20,14 @@ const barlow = Barlow_Condensed({
 
 
 export const metadata: Metadata = {
-  title: "Jet Salvador",
-  description: "Habilitação para Arrais-Amador e Motonauta.",
+  title: "Colégio Aurora | Educação que forma a inteligência, o caráter e o coração.",
+  description: "No Colégio Aurora, unimos excelência acadêmica, ensino bilíngue e valores cristãos para acompanhar cada aluno em sua formação integral, da Educação Infantil ao Ensino Fundamental.",
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/aurora-logo.png', type: 'image/png' },
     ],
-    apple: '/apple-touch-icon.png',
+    apple: '/aurora-logo.png',
   },
-  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
