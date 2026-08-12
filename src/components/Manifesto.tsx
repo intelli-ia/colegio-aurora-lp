@@ -42,10 +42,10 @@ export default function ManifestoSection() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14"
         >
           {[
-            { value: "1.000", suffix: "+", unit: "", label: "Famílias parceiras", desc: "Incentivando a fé unida à educação." },
-            { value: "2.000", suffix: "", unit: "m²", label: "Espaço para o desenvolvimento", desc: "Em contato com a natureza nossas crianças aprendem melhor!" },
-            { value: "20", suffix: "+", unit: "", label: "Profissionais envolvidos", desc: "Educadores que acreditam em transmitir virtudes junto ao conteúdo." },
-            { value: "15", suffix: "+", unit: "", label: "Anos de história", desc: "Formando gerações com base em fé, excelência e amor pelo conhecimento." },
+            { value: "1.000", suffix: "+", unit: "", label: "famílias parceiras do Aurora", desc: "Incentivando a fé unida à educação." },
+            { value: "2.000", suffix: "", unit: "m²", label: "de espaço para o desenvolvimento", desc: "Em contato com a natureza, nossas crianças aprendem melhor a se relacionarem com o mundo à sua volta!" },
+            { value: "20", suffix: "+", unit: "", label: "profissionais diretamente envolvidos na educação de nossas crianças", desc: "Educadores que transmitem virtudes junto ao conteúdo." },
+            { value: "05", suffix: "+", unit: "", label: "anos de história", desc: "Formando gerações com base em fé, excelência e amor pelo conhecimento." },
           ].map((stat, i) => (
             <motion.div
               key={i}

@@ -71,9 +71,12 @@ export default function TestimonialsSection() {
           className="text-center max-w-5xl mx-auto mb-12 md:mb-16"
         >
           <h2 className="font-title text-3xl md:text-5xl font-bold text-[#1C1C1C] leading-tight">
-            Famílias que confiam,
-            <span className="block bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent mt-2">
-              alunos que florescem.
+            O que as nossas famílias
+            <span className="block mt-2">
+              dizem do{" "}
+              <span className="bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent">
+                Aurora
+              </span>
             </span>
           </h2>
         </motion.div>
