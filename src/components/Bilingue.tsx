@@ -47,7 +47,7 @@ export default function Bilingue() {
                 </li>
               ))}
             </ul>
-            <div className="pt-2">
+            <div className="pt-2 flex justify-center md:justify-start">
               <CTAButton href="#contato" label="Agende uma visita" className="[&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]" />
             </div>
           </div>

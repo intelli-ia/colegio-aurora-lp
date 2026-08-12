@@ -24,7 +24,7 @@ export function FinalCTASection() {
               A decisão de hoje vai moldar quem o seu filho será amanhã.
             </h2>
             <p className="text-white text-lg font-light leading-relaxed">
-              No Colégio Aurora, cada criança é acolhida, respeitada e desafiada a crescer — com excelência acadêmica, fé e valores que duram para a vida toda.
+              No Colégio Aurora, cada criança é acolhida, respeitada e desafiada a crescer com excelência acadêmica, fé e valores que duram para a vida toda.
             </p>
           </motion.div>
 
