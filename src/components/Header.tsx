@@ -13,7 +13,11 @@ export default function Header() {
       const hero = document.getElementById("hero");
       if (!hero) return;
       const pastHero = hero.getBoundingClientRect().bottom <= 0;
-      setVisible(pastHero);
+
+      const cta = document.getElementById("final-cta");
+      const ctaInView = cta ? cta.getBoundingClientRect().top <= window.innerHeight * 0.6 : false;
+
+      setVisible(pastHero && !ctaInView);
 
       if (pastHero) {
         const navbarY = 40;
