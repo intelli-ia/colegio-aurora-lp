@@ -1,80 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-const images = [
-  {
-    src: "/testemonials/WhatsApp%20Image%202026-05-25%20at%2020.01.27%20%281%29.jpeg",
-    alt: "Depoimento Esdras Pimentel",
-  },
-  {
-    src: "/testemonials/WhatsApp%20Image%202026-05-25%20at%2020.01.27%20%284%29.jpeg",
-    alt: "Depoimento Rafaela Leal Rocha",
-  },
-  {
-    src: "/testemonials/WhatsApp%20Image%202026-05-25%20at%2020.01.27%20%286%29.jpeg",
-    alt: "Depoimento Italo Reis",
-  },
-  {
-    src: "/testemonials/WhatsApp%20Image%202026-05-25%20at%2020.01.27%20%283%29.jpeg",
-    alt: "Depoimento Kleber Andrade",
-  },
-  {
-    src: "/testemonials/WhatsApp%20Image%202026-05-25%20at%2020.01.27%20%285%29.jpeg",
-    alt: "Depoimento Hellen",
-  },
-  {
-    src: "/testemonials/WhatsApp%20Image%202026-05-25%20at%2020.01.27%20%282%29.jpeg",
-    alt: "Depoimento Hailton Costa",
-  },
-];
-
-export default function TestimonialsScreenshots() {
+export default function LocalizacaoSection() {
   return (
-    <section className="relative w-full pt-16 pb-32 md:pt-24 md:pb-48 bg-white overflow-hidden">
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center px-6 mb-16 md:mb-20"
-      >
-        <h2 className="font-title text-3xl md:text-5xl lg:text-6xl font-bold text-[#1C1C1C] leading-tight">
-          Quem já{" "}
-          <span className="bg-gradient-to-r from-[#00B8D9] to-[#00A6BF] bg-clip-text text-transparent">
-            navega
-          </span>{" "}
-          com a gente
-        </h2>
-      </motion.div>
+    <section className="relative w-full py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-6 md:px-16">
 
-      {/* Auto-scroll marquee */}
-      <div className="overflow-hidden">
+        {/* Header */}
         <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
-          className="flex items-center gap-5 w-max"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-10 md:mb-14"
         >
-          {/* Duplicated for seamless loop */}
-          {[...images, ...images].map((img, i) => (
-            <div
-              key={i}
-              className="flex-shrink-0 w-[260px] md:w-[300px]"
-            >
-              <div className="relative w-full rounded-2xl overflow-hidden aspect-[9/16] border-2 border-[#00B8D9]/40">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover object-top"
-                  sizes="300px"
-                />
-              </div>
-            </div>
-          ))}
+          <h2 className="font-title text-3xl md:text-5xl font-bold text-[#1C1C1C] leading-tight mb-4">
+            Venha nos{" "}
+            <span className="bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent">
+              conhecer pessoalmente.
+            </span>
+          </h2>
+          <p className="text-[#4B4B4B] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Atendemos famílias de diversas localidades, como Lauro, Salvador, Abrantes, Camaçari, Jauá e demais localidades.
+          </p>
         </motion.div>
+
+        {/* Map */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="rounded-3xl overflow-hidden border border-gray-200 shadow-sm w-full aspect-[4/3] md:aspect-[16/7]"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20335.443378797907!2d-38.337861457343706!3d-12.888436620524779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161774f09a8167%3A0x558190cd0a7bf76c!2sCol%C3%A9gio%20Aurora%20Do%20Saber!5e0!3m2!1spt-BR!2sbr!4v1786499882826!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </motion.div>
+
+        {/* Endereço */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center text-[#4B4B4B] text-sm md:text-base mt-5"
+        >
+          R. dos Prazeres, 363 — Recreio Ipitanga, Lauro de Freitas — BA, 42700-290
+        </motion.p>
+
       </div>
     </section>
   );

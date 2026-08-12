@@ -100,15 +100,15 @@ export default function SocialProofSection() {
           className="max-w-2xl mb-20"
         >
           <div className="mb-6">
-            <span className="text-[#00B8D9]/70 font-medium text-sm uppercase tracking-wider">
+            <span className="text-[#3FAEBC]/70 font-medium text-sm uppercase tracking-wider">
               Depoimentos
             </span>
           </div>
           
           <h2 className="font-title text-4xl md:text-5xl font-bold text-[#1C1C1C] leading-tight mb-8">
-            Experiências que
-            <span className="block text-[#00B8D9]">
-              falam por si
+            Famílias que confiam,
+            <span className="block text-[#3FAEBC]">
+              alunos que florescem.
             </span>
           </h2>
         </motion.div>
@@ -135,7 +135,7 @@ export default function SocialProofSection() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-4 h-4 text-[#00B8D9]"
+                      className="w-4 h-4 text-[#3FAEBC]"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -152,8 +152,8 @@ export default function SocialProofSection() {
                 {/* Author */}
                 <div className="pt-6 border-t border-gray-100">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#00B8D9]/20 to-[#00B8D9]/10 rounded-full flex items-center justify-center">
-                      <span className="text-[#00B8D9] font-bold text-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#3FAEBC]/20 to-[#3FAEBC]/10 rounded-full flex items-center justify-center">
+                      <span className="text-[#3FAEBC] font-bold text-lg">
                         {testimonial.author.charAt(0)}
                       </span>
                     </div>
@@ -161,7 +161,7 @@ export default function SocialProofSection() {
                       <p className="text-[#1C1C1C] font-medium">
                         {testimonial.author}
                       </p>
-                      <p className="text-[#00B8D9] text-sm font-medium">
+                      <p className="text-[#3FAEBC] text-sm font-medium">
                         Google Reviews
                       </p>
                     </div>
@@ -195,7 +195,7 @@ export default function SocialProofSection() {
                 className="text-center"
               >
                 <div className="mb-4">
-                  <span className="font-title text-4xl md:text-5xl font-bold text-[#00B8D9] block">
+                  <span className="font-title text-4xl md:text-5xl font-bold text-[#3FAEBC] block">
                     {stat.number}
                   </span>
                 </div>
@@ -217,7 +217,7 @@ export default function SocialProofSection() {
         >
           <p className="text-[#4B4B4B] text-lg font-light max-w-2xl mx-auto">
             Faça parte desta comunidade de navegadores satisfeitos. 
-            <span className="text-[#00B8D9] font-medium"> Sua próxima experiência náutica começa aqui.</span>
+            <span className="text-[#3FAEBC] font-medium"> Sua próxima experiência náutica começa aqui.</span>
           </p>
         </motion.div>
       </div>

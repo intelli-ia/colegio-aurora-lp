@@ -1,35 +1,29 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
 
 const steps = [
   {
     number: "01",
-    title: "Entre em contato pelo\nnosso WhatsApp",
-    body: "Atendemos 24h por dia para te guiar sobre todas as etapas iniciais e darmos entrada na sua habilitação.",
+    title: "Entre em contato\npelo WhatsApp",
+    body: "Entre em contato com nossa equipe e tire todas as dúvidas sobre o Colégio Aurora. Vamos alinhar juntos os detalhes da sua visita antes mesmo de você chegar.",
   },
   {
     number: "02",
-    title: "Acesse as aulas teóricas\nsem sair de casa",
-    body: "Assista às aulas online com conteúdo 100% atualizado, incluindo videoaulas e simulados com questões de provas reais da Marinha do Brasil.",
+    title: "Escolha o melhor\nhorário para você",
+    body: "Nós nos adaptamos à sua rotina. Combinamos o dia e o horário que forem mais convenientes para a sua família, porque o seu tempo também importa.",
   },
   {
     number: "03",
-    title: "Faça suas aulas\npráticas com Barretão",
-    body: "Aprenda a navegar com quem entende e carrega o título de um dos melhores do Brasil.",
+    title: "Visite presencialmente\no Colégio Aurora",
+    body: "Participe de nossa visita guiada conduzida diretamente pela equipe de coordenação. Conheça os espaços, as metodologias e tudo que torna o Colégio Aurora único.",
   },
   {
     number: "04",
-    title: "Chegue na prova\npreparado e confiante",
-    body: "Com nosso método de alta aprovação, você faz a sua prova com a tranquilidade que um navegador deve ter.",
-  },
-  {
-    number: "05",
-    title: "Receba a sua\nhabilitação náutica!",
-    body: "Com sua habilitação em mãos, coloque a sua embarcação na água e desfrute das maravilhas do mundo náutico.",
+    title: "Experimente o que o seu\nfilho vai viver aqui",
+    body: "Mais do que ver as instalações, você vai sentir na prática o ambiente, nosso compromisso com a educação do seu filho e as vivências que formam o dia a dia dos nossos alunos.",
   },
 ];
 
@@ -55,7 +49,7 @@ function StepCard({
       <span className="font-title font-bold text-white/10 text-[48px] md:text-[80px] leading-none select-none">
         {step.number}
       </span>
-      <h3 className="font-title font-bold text-white text-[17px] md:text-[24px] lg:text-[28px] leading-snug mb-2 whitespace-pre-line">
+      <h3 className="font-title font-bold text-white text-[22px] md:text-[30px] lg:text-[36px] leading-snug mb-4 whitespace-pre-line">
         {step.title}
       </h3>
       <p className="text-white/60 text-[14px] md:text-[17px] leading-relaxed">
@@ -64,22 +58,31 @@ function StepCard({
     </motion.div>
   );
 
+  const image = (
+    <motion.div
+      initial={{ opacity: 0, x: isLeft ? 40 : -40 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`w-full aspect-video bg-white/5 border border-white/10 rounded-2xl ${isLeft ? "pl-4 md:pl-8" : "pr-4 md:pr-8"}`}
+    />
+  );
+
   const dot = (
     <div className="flex justify-center">
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : {}}
         transition={{ duration: 0.4, delay: 0.2 }}
-        className="relative z-10 mt-4 w-4 h-4 md:w-5 md:h-5 rounded-full bg-amber-400 border-[3px] border-white/20 shadow-[0_0_12px_rgba(251,191,36,0.4)]"
+        className="relative z-10 mt-4 w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#FABD22] border-[3px] border-white/20 shadow-[0_0_12px_rgba(250,189,34,0.4)]"
       />
     </div>
   );
 
   return (
-    <div className="relative grid grid-cols-[1fr_40px_1fr] md:grid-cols-[1fr_64px_1fr] items-start">
+    <div className="relative grid grid-cols-[1fr_40px_1fr] md:grid-cols-[1fr_64px_1fr] items-center">
       {/* Col 1 */}
       <div className="flex justify-end">
-        {isLeft && content}
+        {isLeft ? content : image}
       </div>
 
       {/* Col 2 — dot */}
@@ -87,7 +90,7 @@ function StepCard({
 
       {/* Col 3 */}
       <div className="flex justify-start">
-        {!isLeft && content}
+        {isLeft ? image : content}
       </div>
     </div>
   );
@@ -110,7 +113,7 @@ function MobileStepCard({
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : {}}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="relative z-10 mt-4 w-3.5 h-3.5 rounded-full bg-amber-400 border-[2.5px] border-white/20 shadow-[0_0_10px_rgba(251,191,36,0.4)]"
+          className="relative z-10 mt-4 w-3.5 h-3.5 rounded-full bg-[#FABD22] border-[2.5px] border-white/20 shadow-[0_0_10px_rgba(250,189,34,0.4)]"
         />
       </div>
 
@@ -125,9 +128,10 @@ function MobileStepCard({
         <span className="font-title font-bold text-white/10 text-[40px] leading-none select-none">
           {step.number}
         </span>
-        <h3 className="font-title font-bold text-white text-[17px] leading-snug mb-1.5 whitespace-pre-line">
+        <h3 className="font-title font-bold text-white text-[22px] leading-snug mb-3 whitespace-pre-line">
           {step.title}
         </h3>
+        <div className="w-full aspect-video bg-white/5 border border-white/10 rounded-2xl mb-3" />
         <p className="text-white/60 text-[14px] leading-relaxed">
           {step.body}
         </p>
@@ -155,29 +159,7 @@ export default function ProcessSection() {
   const mobileLineHeight = useTransform(mobileScrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={sectionRef} id="processo" className="relative py-20 md:py-32 overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 hidden md:block">
-          <Image
-            src="/casal-jetski.webp"
-            alt="Casal se divertindo no jet ski"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 md:hidden">
-          <Image
-            src="/casal-jetski.webp"
-            alt="Casal se divertindo no jet ski"
-            fill
-            className="object-cover object-[30%_70%]"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/55 md:bg-black/50" />
-      </div>
+    <section ref={sectionRef} id="processo" className="relative py-20 md:py-32 overflow-hidden bg-[#060606]">
 
       <div className="container mx-auto px-6 md:px-16">
         {/* Header */}
@@ -192,9 +174,9 @@ export default function ProcessSection() {
             Passo a passo
           </span>
           <h2 className="font-title text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Veja como é simples conquistar
+            Veja como é simples conhecer
             <br />
-            a sua habilitação náutica:
+            o Colégio Aurora:
           </h2>
         </motion.div>
 
@@ -205,10 +187,10 @@ export default function ProcessSection() {
           {/* Animated progress line */}
           <motion.div
             style={{ height: lineHeight }}
-            className="absolute left-1/2 top-0 w-[2px] -translate-x-1/2 bg-gradient-to-b from-amber-400 to-amber-500 origin-top"
+            className="absolute left-1/2 top-0 w-[2px] -translate-x-1/2 bg-gradient-to-b from-[#FABD22] to-[#F56800] origin-top"
           />
 
-          <div className="flex flex-col gap-10 lg:gap-14">
+          <div className="flex flex-col gap-20 lg:gap-28">
             {steps.map((step, i) => (
               <StepCard key={step.number} step={step} index={i} />
             ))}
@@ -222,7 +204,7 @@ export default function ProcessSection() {
           {/* Animated progress line */}
           <motion.div
             style={{ height: mobileLineHeight }}
-            className="absolute left-[15px] top-0 w-[2px] bg-gradient-to-b from-amber-400 to-amber-500 origin-top"
+            className="absolute left-[15px] top-0 w-[2px] bg-gradient-to-b from-[#FABD22] to-[#F56800] origin-top"
           />
 
           <div className="flex flex-col gap-8">
@@ -240,12 +222,7 @@ export default function ProcessSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center mt-16 md:mt-24"
         >
-          <CTAButton
-            href="https://wa.me/557199891008?text=Vim%20do%20site%20e%20gostaria%20de%20entender%20mais"
-            target="_blank"
-            rel="noopener noreferrer"
-            label="Quero garantir minha vaga"
-          />
+          <CTAButton href="#contato" label="Agendar minha visita" />
         </motion.div>
       </div>
     </section>

@@ -20,26 +20,12 @@ export default function AboutSection() {
           >
             <div className="relative aspect-[4/5] lg:aspect-auto lg:flex-1 w-full max-w-sm mx-auto lg:max-w-full rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/barretao-profile.jpg"
-                alt="Barretão, fundador da Jet Salvador"
+                src="/ekcnk kec-mkencke.webp"
+                alt="Educadora do Colégio Aurora"
                 fill
                 className="object-cover object-center"
               />
 
-              {/* Marquee glassmorphism */}
-              <div className="absolute bottom-0 left-0 right-0 overflow-hidden py-4 bg-white/10 backdrop-blur-md border-t border-white/20">
-                <motion.div
-                  animate={{ x: ["0%", "-50%"] }}
-                  transition={{ duration: 18, ease: "linear", repeat: Infinity }}
-                  className="flex whitespace-nowrap w-max"
-                >
-                  {Array.from({ length: 8 }).map((_, i) => (
-                    <span key={i} className="mx-8 font-title font-bold text-white text-4xl md:text-5xl tracking-[0.2em] uppercase">
-                      BARRETÃO
-                    </span>
-                  ))}
-                </motion.div>
-              </div>
             </div>
           </motion.div>
 
@@ -53,35 +39,27 @@ export default function AboutSection() {
           >
             <div>
               <h2 className="font-title text-3xl md:text-5xl lg:text-6xl font-bold text-[#1C1C1C] leading-tight">
-                Aprenda com{" "}
-                <span className="bg-gradient-to-r from-[#00B8D9] to-[#00A6BF] bg-clip-text text-transparent">
-                  Barretão!
+                Professores preparados para{" "}
+                <span className="bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent">
+                  muito mais do que ensinar.
                 </span>
               </h2>
             </div>
 
             <div className="space-y-4 text-[#4B4B4B] text-base md:text-[17px] leading-relaxed">
               <p>
-                Sob a liderança do nosso fundador,{" "}
-                <strong className="text-[#1C1C1C]">Barretão</strong>, construímos um histórico inquestionável de eficiência na Baía de Todos os Santos com mais de 15 anos de atuação focados em elevar o padrão de segurança e profissionalismo no mercado náutico baiano.
+                Nosso corpo docente é formado por educadores com{" "}
+                <strong className="text-[#1C1C1C]">formação acadêmica sólida e especializações comprovadas</strong>{" "}
+                em suas áreas de atuação. Cada professor é selecionado não apenas pela competência técnica, mas pelo compromisso com a missão do Colégio Aurora: formar pessoas, não apenas alunos.
               </p>
               <p>
-                O rigor do nosso trabalho rendeu ao fundador o prestigiado título de{" "}
-                <strong className="text-[#1C1C1C]">"Amigo da Marinha"</strong>, honraria oficial concedida pela Capitania dos Portos da Bahia. O maior atestado de credibilidade que um profissional do setor pode conquistar.
-              </p>
-              <p>
-                Já ultrapassamos{" "}
-                <strong className="text-[#1C1C1C]">500 alunos formados</strong>, mantendo uma taxa de{" "}
-                <strong className="text-[#1C1C1C]">95% de aprovação</strong> nos exames oficiais.
+                Além da competência pedagógica, nossos educadores compartilham os{" "}
+                <strong className="text-[#1C1C1C]">valores cristãos</strong>{" "}
+                que fundamentam o Aurora: respeito, dedicação, afeto e exemplo. Porque ensinar bem começa por ser uma boa pessoa.
               </p>
             </div>
 
-            <CTAButton
-              href="https://wa.me/557199891008?text=Vim%20do%20site%20e%20gostaria%20de%20entender%20mais"
-              target="_blank"
-              rel="noopener noreferrer"
-              label="Começar com a Jet Salvador"
-            />
+            <CTAButton href="#contato" label="Conheça nossa equipe" />
           </motion.div>
 
         </div>

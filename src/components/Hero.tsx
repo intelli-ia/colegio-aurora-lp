@@ -32,18 +32,15 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex items-center justify-center md:justify-start gap-3 mb-5 md:mb-8"
+            className="flex items-center justify-start gap-3 mb-5 md:mb-8"
           >
             <Image
-              src="/jetsalvador_logo.jpeg"
-              alt="Logo Jet Salvador"
-              width={56}
-              height={56}
-              className="rounded-full border-2 border-white/20 shadow-lg w-9 h-9 md:w-14 md:h-14"
+              src="/aurora-logo.png"
+              alt="Logo Colégio Aurora"
+              width={130}
+              height={130}
+              className=""
             />
-            <span className="font-title font-bold text-white text-base md:text-xl tracking-wide">
-              Jet Salvador
-            </span>
           </motion.div>
 
           {/* Headline */}
@@ -53,7 +50,7 @@ export default function HeroSection() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="font-title font-bold leading-[1.22] md:leading-[1.04] text-white mb-3 md:mb-7 text-[1.85rem] md:text-[2.5rem] lg:text-[3.25rem] md:max-w-xl lg:max-w-2xl"
           >
-            Adquira sua Habilitação Náutica para JetSki e Lancha em Salvador
+            Educação que forma a inteligência, o caráter e o coração.
           </motion.h1>
 
           {/* Subheadline */}
@@ -63,7 +60,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             className="text-white/65 text-base md:text-xl font-light leading-relaxed max-w-2xl md:max-w-lg mb-5 md:mb-10"
           >
-            Com mais de 15 anos de experiência e mais de 500 alunos formados, oferecemos uma formação completa para você navegar sem pesar no bolso.
+            No Colégio Aurora, unimos excelência acadêmica, ensino bilíngue e valores cristãos para acompanhar cada aluno em sua formação integral, desde a Educação Infantil até os anos finais do ensino fundamental.
           </motion.p>
 
           {/* CTA */}
@@ -74,10 +71,13 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row items-center md:items-start gap-5 mb-5 md:mb-12"
           >
             <CTAButton
-              href="https://wa.me/557199891008?text=Vim%20do%20site%20e%20gostaria%20de%20entender%20mais"
-              target="_blank"
-              rel="noopener noreferrer"
-              label="Quero tirar minha habilitação"
+              href="#contato"
+              label="Agende uma visita"
+            />
+            <CTAButton
+              href="#proposta"
+              label="Conheça nossa proposta pedagógica"
+              variant="secondary"
             />
           </motion.div>
 

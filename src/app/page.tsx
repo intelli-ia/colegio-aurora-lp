@@ -1,9 +1,9 @@
 import HeroSection from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
+import Manifesto from "@/components/Manifesto";
 import Services from "@/components/Services";
-import ModalidadesSection from "@/components/Modalidades";
-import PorQueJetSalvador from "@/components/PorQueJetSalvador";
-import DespachantaNautica from "@/components/DespachantaNautica";
+import PorQueAurora from "@/components/PorQueAurora";
+import Bilingue from "@/components/Bilingue";
 import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import TestimonialsScreenshots from "@/components/TestimonialsScreenshots";
@@ -15,10 +15,10 @@ export default function HomePage() {
     <main>
       <HeroSection />
       <SocialProof />
+      <Manifesto />
+      <PorQueAurora />
       <Services />
-      <ModalidadesSection />
-      <PorQueJetSalvador />
-      <DespachantaNautica />
+      <Bilingue />
       <Gallery />
       <About />
       <TestimonialsScreenshots />

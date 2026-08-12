@@ -5,12 +5,12 @@ import { CTAButton } from "@/components/ui/CTAButton";
 
 export default function DesireSection() {
   return (
-    <section className="relative w-full bg-[#1C1C1C] overflow-hidden flex flex-col md:flex-row md:items-stretch md:min-h-screen">
+    <section className="relative w-full bg-[#1C1C1C] overflow-hidden flex flex-col md:flex-row md:items-stretch md:min-h-[90vh]">
 
       {/* Vídeo — topo no mobile (quadrado), coluna esquerda no desktop */}
       <div className="w-full aspect-square md:aspect-auto md:w-[38%] md:flex-shrink-0 relative">
         <video
-          src="/gallery-video.mp4"
+          src="/d6e38ac5-cb53-457d-83a0-8d89b6f6cb29.mp4"
           autoPlay
           muted
           loop
@@ -23,16 +23,6 @@ export default function DesireSection() {
       <div className="flex-1 flex items-center py-12 md:py-0">
         <div className="w-full px-6 md:pl-24 md:pr-16 max-w-2xl">
 
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="inline-block text-[#00B8D9] font-semibold text-sm uppercase tracking-widest mb-4"
-          >
-            Não é só para rico
-          </motion.span>
-
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -40,9 +30,7 @@ export default function DesireSection() {
             viewport={{ once: true }}
             className="font-title text-3xl md:text-5xl font-bold text-white leading-tight mb-5 md:mb-6"
           >
-            O mundo náutico é mais acessível
-            <br />
-            do que você imagina
+            Não ensinamos apenas conteúdo, formamos o caráter dos nossos alunos.
           </motion.h2>
 
           <motion.p
@@ -52,8 +40,7 @@ export default function DesireSection() {
             viewport={{ once: true }}
             className="text-white/60 text-lg md:text-xl font-light leading-relaxed mb-8 md:mb-10"
           >
-            Tirar uma habilitação náutica custa menos da metade de uma CNH.
-            Chega de achar que isso é coisa de outro mundo. É mais simples, mais barato e mais divertido do que você pensa.
+            O caráter se constrói na música, na arte, na oração e no contato com os outros. A vivência da fé e o exemplo dos santos inspiram nossas crianças a crescer com virtude e propósito, enquanto os espaços verdes e a convivência diária com os colegas ensinam partilha, respeito e amizade. Tudo com a mesma atenção que dedicamos ao conteúdo pedagógico.
           </motion.p>
 
           <motion.div
@@ -62,12 +49,7 @@ export default function DesireSection() {
             transition={{ duration: 0.7, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <CTAButton
-              href="https://wa.me/557199891008?text=Vim%20do%20site%20e%20gostaria%20de%20entender%20mais"
-              target="_blank"
-              rel="noopener noreferrer"
-              label="Quero viver essa experiência"
-            />
+            <CTAButton href="#contato" label="Conheça o Aurora" />
           </motion.div>
 
         </div>

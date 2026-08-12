@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#00B8D9", // Azul piscina clara
-        "primary-dark": "#00A6BF", // Azul tropical mais profundo
-        accent: "#FFD966", // Amarelo solar (contraste alegre)
-        highlight: "#FF6B6B", // Coral (CTA emocional)
-        "highlight-light": "#FFE0E0", // Fundo claro para destaque
+        primary: "#3FAEBC",
+        "primary-dark": "#0164A4",
+        accent: "#FABD22",
+        highlight: "#F56800",
+        "highlight-light": "#FEE8D5",
         gray: {
           900: "#1C1C1C", // Texto principal
           700: "#4B4B4B", // Texto secundário

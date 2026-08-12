@@ -54,14 +54,14 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
           <Image
-            src="/jetsalvador_logo.jpeg"
-            alt="Logo Jet Salvador"
+            src="/Aurora-Site-4.png"
+            alt="Logo Colégio Aurora"
             width={34}
             height={34}
             className="rounded-full border border-white/40 shadow transition-transform duration-300 group-hover:scale-105"
           />
-          <span className={`font-title font-bold text-base tracking-wide transition-colors duration-300 ${lightBg ? "text-[#00B8D9]" : "text-white"}`}>
-            Jet Salvador
+          <span className={`font-title font-bold text-base tracking-wide transition-colors duration-300 ${lightBg ? "text-[#0164A4]" : "text-white"}`}>
+            Colégio Aurora
           </span>
         </Link>
 
@@ -70,7 +70,7 @@ export default function Header() {
           href="https://wa.me/557199891008?text=Vim%20do%20site%20e%20gostaria%20de%20entender%20mais"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 bg-[#00B8D9] hover:bg-[#00A6BF] text-white font-semibold text-sm rounded-full px-5 py-2 transition-colors duration-300"
+          className="flex-shrink-0 bg-[#F56800] hover:bg-[#0164A4] text-white font-semibold text-sm rounded-full px-5 py-2 transition-colors duration-300"
         >
           Entrar em contato
         </Link>

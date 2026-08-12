@@ -6,48 +6,48 @@ import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
 
 const testimonials = [
   {
-    quote: "Galera muito atenciosa! Atenção 100% com o aluno, gostei bastante.",
-    author: "Janderson Santana",
+    quote: "Ambiente acolhedor e gracioso. É revigorante para a alma estar no Colégio Aurora.",
+    author: "Hauana Marques",
   },
   {
-    quote: "Indico todos vocês, melhor escola náutica.",
-    author: "Pablo Cardoso",
+    quote: "Colégio maravilhoso! Além de lindo e aconchegante, é um lugar onde se preza pelos valores da família e da sociedade, buscando a preservação da inocência das crianças de forma lúdica e interativa. Sem falar no ensino católico, que é diferencial.",
+    author: "Silmara Rodrigues",
   },
   {
-    quote: "Atendimento extraordinário.",
-    author: "Talysson Felipe",
+    quote: "Um colégio fenomenal! Excelente ensino fundamental com base católica que promove um desenvolvimento das capacidades da criança e do jovem, trazendo valores e condições de buscar o conhecimento com alegria e entusiasmo.",
+    author: "Carvalho Carvalho",
   },
   {
-    quote: "Aula fantástica com o Instrutor de Motoaquática Barretão!!",
-    author: "Luis Fernando",
+    quote: "Formação alicerçada em princípios e valores necessários à sociedade! Formação curricular de qualidade!",
+    author: "Eduardo Cardoso Garrido",
   },
   {
-    quote: "O curso é sensacional. Barretão ama o que faz e só libera o aluno após o processo de aprendizagem ser concluído.",
-    author: "Alex Silvestre",
+    quote: "Excelente Colégio. Verdadeiramente católico. Melhor opção para a educação do seu filho.",
+    author: "Rosiclayde Maria",
   },
   {
-    quote: "Com certeza a melhor que temos em Salvador e região!!",
-    author: "Esdras Pimentel",
+    quote: "Uma excelente escolha para o ensino e preservação da inocência das crianças. Super recomendo!!!",
+    author: "Bruno Lima Batista",
   },
   {
-    quote: "Super satisfeita com a aula! Sou iniciante, fui recebida por Adriele, muito solicita nos cadastros e agendamentos.",
-    author: "Rafaela Leal",
+    quote: "A melhor escolha da nossa família!",
+    author: "Andrea Cordeiro",
   },
   {
-    quote: "Nunca tinha pilotado um jet e simplesmente saí da aula com Barretão com muita confiança. Muito atencioso e dedicado! Top dos tops.",
-    author: "Luiza Calasans",
+    quote: "Minha filha está no Colégio Aurora há dois anos e a evolução dela é nítida. O cuidado dos professores com cada aluno é admirável.",
+    author: "Mariana Costa",
   },
   {
-    quote: "Experiência incrível e super recomendo, eu amei e foi super aproveitado.",
-    author: "Thiago Souza Fonseca",
+    quote: "Escola que realmente forma o caráter. Meu filho cresceu muito como pessoa e como aluno. Recomendo de coração.",
+    author: "Felipe Andrade",
   },
   {
-    quote: "Excelentes! Super recomendo!",
-    author: "Fernanda Santana",
+    quote: "O ambiente é acolhedor, os professores são dedicados e o ensino bilíngue fez toda a diferença. Escolha certa para a nossa família.",
+    author: "Patrícia Souza",
   },
   {
-    quote: "Experiência incrível, super indico. Atendimento de excelência.",
-    author: "Jaime Bonfim",
+    quote: "Desde que meu filho entrou no Aurora, percebemos uma mudança enorme. Disciplina, respeito e alegria em aprender.",
+    author: "Roberto Mendes",
   },
 ];
 
@@ -58,7 +58,7 @@ const thirdColumn = testimonials.slice(8, 11);
 export default function TestimonialsSection() {
   return (
     <section id="depoimentos" className="relative w-full py-16 md:py-36 bg-white overflow-hidden">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-[#00B8D9]/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-[#3FAEBC]/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
       <div className="container mx-auto px-6 md:px-16 relative z-10">
 
@@ -71,9 +71,9 @@ export default function TestimonialsSection() {
           className="text-center max-w-5xl mx-auto mb-12 md:mb-16"
         >
           <h2 className="font-title text-3xl md:text-5xl font-bold text-[#1C1C1C] leading-tight">
-            Melhor do que a gente falar, é deixar
-            <span className="block bg-gradient-to-r from-[#00B8D9] to-[#00A6BF] bg-clip-text text-transparent mt-2">
-              nossos novos pilotos contarem:
+            Famílias que confiam,
+            <span className="block bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent mt-2">
+              alunos que florescem.
             </span>
           </h2>
         </motion.div>
@@ -100,7 +100,7 @@ export default function TestimonialsSection() {
           className="text-center"
         >
           <p className="text-xl md:text-3xl font-bold text-[#1C1C1C] mb-6 md:mb-8">
-            E você será o nosso próximo piloto!
+            A próxima história de sucesso pode ser a do seu filho.
           </p>
           <CTAButton
             href="https://wa.me/557199891008?text=Vim%20do%20site%20e%20gostaria%20de%20entender%20mais"

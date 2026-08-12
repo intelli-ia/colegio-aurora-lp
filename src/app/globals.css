@@ -14,11 +14,11 @@
   --font-inter: 'Inter, sans-serif';
 
   /* você pode definir também cores aqui como variáveis CSS, se quiser */
-  --color-primary: #00B8D9;
-  --color-primary-dark: #00A6BF;
-  --color-accent: #FFD966;
-  --color-highlight: #FF6B6B;
-  --color-highlight-light: #FFE0E0;
+  --color-primary: #3FAEBC;
+  --color-primary-dark: #0164A4;
+  --color-accent: #FABD22;
+  --color-highlight: #F56800;
+  --color-highlight-light: #FEE8D5;
   --color-gray-900: #1C1C1C;
   --color-gray-700: #4B4B4B;
   --color-gray-100: #F5F5F5;
