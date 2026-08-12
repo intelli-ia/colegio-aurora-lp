@@ -18,7 +18,7 @@ export default function ManifestoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center mb-12"
+          className="max-w-3xl mx-auto text-left md:text-center mb-12"
         >
           <span className="text-[#3FAEBC]/60 font-medium text-sm uppercase tracking-widest mb-8 block">
             Nossa missão
@@ -39,7 +39,7 @@ export default function ManifestoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14"
+          className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-14"
         >
           {[
             { value: "1.000", suffix: "+", unit: "", label: "famílias parceiras do Aurora", desc: "Incentivando a fé unida à educação." },
@@ -53,7 +53,7 @@ export default function ManifestoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 + i * 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-7 md:p-8 text-left"
+              className="bg-white/5 border border-white/10 rounded-2xl p-7 md:p-8 text-center md:text-left"
             >
               <div className="font-title font-bold text-white text-4xl md:text-5xl leading-none mb-2">
                 {stat.value}
