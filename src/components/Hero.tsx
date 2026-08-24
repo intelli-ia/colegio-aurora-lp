@@ -71,7 +71,9 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row items-center md:items-start gap-5 mb-5 md:mb-12"
           >
             <CTAButton
-              href="#contato"
+              href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora"
+              target="_blank"
+              rel="noopener noreferrer"
               label="Agende uma visita"
             />
             <CTAButton

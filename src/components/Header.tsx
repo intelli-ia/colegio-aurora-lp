@@ -71,7 +71,7 @@ export default function Header() {
 
         {/* CTA */}
         <Link
-          href="https://wa.me/557199891008?text=Vim%20do%20site%20e%20gostaria%20de%20entender%20mais"
+          href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-shrink-0 bg-[#F56800] hover:bg-[#0164A4] text-white font-semibold text-sm rounded-full px-5 py-2 transition-colors duration-300"

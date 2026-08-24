@@ -81,7 +81,7 @@ export default function PorQueAurora() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center mt-14 md:mt-20"
         >
-          <CTAButton href="#contato" label="Agende uma visita" />
+          <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Agende uma visita" />
         </motion.div>
       </div>
     </section>

@@ -59,7 +59,7 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <CTAButton href="#contato" label="Conheça nossa equipe" />
+            <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Conheça nossa equipe" />
           </motion.div>
 
         </div>

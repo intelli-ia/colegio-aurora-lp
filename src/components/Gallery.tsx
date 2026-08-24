@@ -49,7 +49,7 @@ export default function DesireSection() {
             transition={{ duration: 0.7, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <CTAButton href="#contato" label="Conheça o Aurora" />
+            <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Conheça o Aurora" />
           </motion.div>
 
         </div>

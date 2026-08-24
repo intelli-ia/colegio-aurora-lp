@@ -48,7 +48,7 @@ export default function Bilingue() {
               ))}
             </ul>
             <div className="pt-2 flex justify-center md:justify-start">
-              <CTAButton href="#contato" label="Agende uma visita" className="[&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]" />
+              <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Agende uma visita" className="[&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]" />
             </div>
           </div>
 

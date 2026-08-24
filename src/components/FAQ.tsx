@@ -104,7 +104,7 @@ export default function FAQSection() {
           <p className="text-[#4B4B4B] text-base md:text-lg mb-5 md:mb-6">
             Ainda tem dúvidas? Nossa equipe está pronta para te atender.
           </p>
-          <CTAButton href="#contato" label="Fale conosco" />
+          <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Fale conosco" />
         </motion.div>
 
       </div>
