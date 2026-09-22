@@ -51,13 +51,13 @@ function StepCard({
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`max-w-md ${isLeft ? "text-right pr-4 md:pr-8" : "text-left pl-4 md:pl-8"}`}
     >
-      <span className="font-title font-bold text-white/35 text-[48px] md:text-[80px] leading-none select-none">
+      <span className="font-title font-bold text-[#1C1C1C]/10 text-[48px] md:text-[80px] leading-none select-none">
         {step.number}
       </span>
-      <h3 className="font-title font-bold text-white text-[22px] md:text-[30px] lg:text-[36px] leading-snug mb-4 whitespace-pre-line">
+      <h3 className="font-title font-bold text-[#1C1C1C] text-[22px] md:text-[30px] lg:text-[36px] leading-snug mb-4 whitespace-pre-line">
         {step.title}
       </h3>
-      <p className="text-white text-[14px] md:text-[17px] leading-relaxed">
+      <p className="text-[#1C1C1C]/70 text-[14px] md:text-[17px] leading-relaxed">
         {step.body}
       </p>
     </motion.div>
@@ -90,7 +90,7 @@ function StepCard({
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : {}}
         transition={{ duration: 0.4, delay: 0.2 }}
-        className="relative z-10 mt-4 w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#FABD22] border-[3px] border-white/20 shadow-[0_0_12px_rgba(250,189,34,0.4)]"
+        className="relative z-10 mt-4 w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#FABD22] border-[3px] border-white shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_0_12px_rgba(250,189,34,0.4)]"
       />
     </div>
   );
@@ -130,7 +130,7 @@ function MobileStepCard({
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : {}}
           transition={{ duration: 0.4, delay: 0.2 }}
-          className="relative z-10 mt-4 w-3.5 h-3.5 rounded-full bg-[#FABD22] border-[2.5px] border-white/20 shadow-[0_0_10px_rgba(250,189,34,0.4)]"
+          className="relative z-10 mt-4 w-3.5 h-3.5 rounded-full bg-[#FABD22] border-[2.5px] border-white shadow-[0_0_0_1px_rgba(0,0,0,0.08),0_0_10px_rgba(250,189,34,0.4)]"
         />
       </div>
 
@@ -142,10 +142,10 @@ function MobileStepCard({
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="pl-4"
       >
-        <span className="font-title font-bold text-white/35 text-[40px] leading-none select-none">
+        <span className="font-title font-bold text-[#1C1C1C]/10 text-[40px] leading-none select-none">
           {step.number}
         </span>
-        <h3 className="font-title font-bold text-white text-[22px] leading-snug mb-3 whitespace-pre-line">
+        <h3 className="font-title font-bold text-[#1C1C1C] text-[22px] leading-snug mb-3 whitespace-pre-line">
           {step.title}
         </h3>
         {step.image ? (
@@ -159,7 +159,7 @@ function MobileStepCard({
             </svg>
           </div>
         )}
-        <p className="text-white text-[14px] leading-relaxed">
+        <p className="text-[#1C1C1C]/70 text-[14px] leading-relaxed">
           {step.body}
         </p>
       </motion.div>
@@ -186,7 +186,7 @@ export default function ProcessSection() {
   const mobileLineHeight = useTransform(mobileScrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={sectionRef} id="processo" className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-[#F56800] to-[#FABD22]">
+    <section ref={sectionRef} id="processo" className="relative py-20 md:py-32 overflow-hidden bg-white">
 
       <div className="container mx-auto px-6 md:px-16">
         {/* Header */}
@@ -197,7 +197,7 @@ export default function ProcessSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-24"
         >
-          <h2 className="font-title text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+          <h2 className="font-title text-3xl md:text-4xl lg:text-5xl font-bold text-[#1C1C1C] leading-tight">
             Veja como é simples conhecer
             <br />
             o Colégio Aurora:
@@ -207,7 +207,7 @@ export default function ProcessSection() {
         {/* Desktop stepper — alternating sides */}
         <div ref={timelineRef} className="relative hidden md:block max-w-7xl mx-auto">
           {/* Background line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 bg-white/10" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 bg-black/10" />
           {/* Animated progress line */}
           <motion.div
             style={{ height: lineHeight }}
@@ -224,7 +224,7 @@ export default function ProcessSection() {
         {/* Mobile stepper — single column */}
         <div ref={mobileTimelineRef} className="relative md:hidden max-w-lg mx-auto">
           {/* Background line */}
-          <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-white/10" />
+          <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-black/10" />
           {/* Animated progress line */}
           <motion.div
             style={{ height: mobileLineHeight }}

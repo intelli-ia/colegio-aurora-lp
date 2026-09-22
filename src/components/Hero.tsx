@@ -74,7 +74,7 @@ export default function HeroSection() {
                 className="w-full [&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]"
               />
               <CTAButton
-                href="#proposta"
+                href="#depoimentos"
                 label="Conheça nossa proposta pedagógica"
                 variant="secondary"
                 className="w-full"
@@ -137,7 +137,7 @@ export default function HeroSection() {
               className="[&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]"
             />
             <CTAButton
-              href="#proposta"
+              href="#depoimentos"
               label="Conheça nossa proposta pedagógica"
               variant="secondary"
             />

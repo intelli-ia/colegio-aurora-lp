@@ -50,10 +50,10 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-5 left-0 right-0 z-50 flex justify-center px-4 transition-[opacity,transform] duration-500 ease-out ${
-      visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
+    <header className={`fixed bottom-5 md:bottom-auto md:top-5 left-0 right-0 z-50 flex justify-center px-4 transition-[opacity,transform] duration-500 ease-out ${
+      visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 md:-translate-y-4 pointer-events-none"
     }`}>
-      <div style={{ WebkitBackdropFilter: "blur(12px)", backdropFilter: "blur(12px)" }} className="flex items-center justify-between gap-6 bg-white/10 border border-white/20 rounded-full px-4 py-2.5 shadow-lg w-full max-w-xl transform-gpu">
+      <div style={{ WebkitBackdropFilter: "blur(12px)", backdropFilter: "blur(12px)" }} className="flex items-center justify-between gap-3 md:gap-6 bg-white/10 border border-white/20 rounded-full px-4 py-2.5 shadow-lg w-full max-w-xl transform-gpu">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
@@ -64,8 +64,8 @@ export default function Header() {
             height={34}
             className="transition-transform duration-300 group-hover:scale-105"
           />
-          <span className={`font-title font-bold text-base tracking-wide transition-colors duration-300 ${lightBg ? "text-[#0164A4]" : "text-white"}`}>
-            Colégio Aurora
+          <span className={`font-title font-bold text-[13px] md:text-base tracking-wide whitespace-nowrap transition-colors duration-300 ${lightBg ? "text-[#0164A4]" : "text-white"}`}>
+            Matrículas Abertas
           </span>
         </Link>
 
@@ -74,9 +74,9 @@ export default function Header() {
           href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 bg-[#F56800] hover:bg-[#0164A4] text-white font-semibold text-sm rounded-full px-5 py-2 transition-colors duration-300"
+          className="flex-shrink-0 bg-[#16A34A] hover:bg-[#0164A4] text-white font-semibold text-sm md:text-base rounded-full px-4 py-1.5 md:px-5 md:py-2 transition-colors duration-300"
         >
-          Entrar em contato
+          Fale conosco
         </Link>
 
       </div>
