@@ -7,114 +7,64 @@ import { HeroSlideshow } from "@/components/ui/HeroSlideshow";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative w-full md:min-h-screen flex flex-col rounded-b-[4rem] md:rounded-b-[5.5rem] overflow-hidden z-10 bg-white">
+    <section
+      id="hero"
+      className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-[#07152c] md:min-h-screen"
+    >
+      <div className="absolute inset-0 z-0">
+        <HeroSlideshow className="h-full w-full" />
+      </div>
 
-      {/* Logo + Matrículas abertas (mobile only, above the card) */}
-      <div
-        className="md:hidden flex items-center justify-between px-6 pt-8 pb-6"
-      >
+      {/* Gradient overlay keeps the copy readable over every slide. */}
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-black/35 via-black/10 to-black/80" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[72%] bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
+
+      <header className="relative z-10 flex w-full items-center justify-between px-6 pt-8 pb-6 md:px-12 md:pt-10 lg:px-16">
         <Image
           src="/aurora-logo.png"
           alt="Logo Colégio Aurora"
-          width={90}
-          height={90}
+          width={150}
+          height={150}
+          className="h-[76px] w-[76px] object-contain md:h-[140px] md:w-[140px]"
+          priority
         />
         <div className="flex flex-col items-end">
-          <span className="font-title font-extrabold uppercase leading-[0.95] text-right text-3xl bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent">
+          <span className="text-right font-title text-3xl font-extrabold uppercase leading-[0.95] text-white md:text-4xl">
             Matrículas<br />Abertas
           </span>
-          <Badge variant="outline" className="mt-1.5">
+          <Badge variant="outline" className="mt-1.5 border-white/50 bg-black/20 text-white">
             Do G2 ao 9° ano
           </Badge>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile card */}
-      <div className="md:hidden px-5 pb-8">
-        <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#0B3B66] via-[#0164A4] to-[#3FAEBC]">
-
-          <div className="relative z-10 px-6 pt-10 pb-6 text-left">
-            <h1 className="font-title font-bold leading-[1.3] text-white text-[1.6rem]">
-              Excelência acadêmica. Ensino bilíngue. Valores cristãos.
-            </h1>
-            <p className="text-white/70 text-left text-base font-light leading-snug mb-6 mt-2">
-              Da Educação Infantil ao Ensino Fundamental II.
-            </p>
-
-            <div
-              className="flex flex-col items-stretch gap-4 mb-6"
-            >
-              <CTAButton
-                href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
-                target="_blank"
-                rel="noopener noreferrer"
-                label="Agende uma visita"
-                className="w-full [&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]"
-              />
-              <CTAButton
-                href="#depoimentos"
-                label="Conheça nossa proposta pedagógica"
-                variant="secondary"
-                className="w-full"
-              />
-            </div>
-
-            <div>
-              <HeroSlideshow className="rounded-[1.75rem] h-[300px]" />
-            </div>
+      <div className="relative z-[3] mt-auto w-full px-6 pb-12 pt-24 md:px-12 md:pb-8 lg:px-16">
+        <div className="max-w-3xl text-left">
+          <h1 className="mb-3 max-w-2xl font-title text-[1.75rem] font-bold leading-[1.1] text-white md:text-[2.5rem] lg:text-[3rem]">
+            Ensino bilíngue.<br />
+            Valores cristãos.<br />
+            Excelência acadêmica.
+          </h1>
+          <p className="mb-6 max-w-xl text-base font-light leading-snug text-white/85 md:mb-8 md:text-xl">
+            Da Educação Infantil ao Ensino Fundamental II.
+          </p>
+          <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-start">
+            <CTAButton
+              href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+              target="_blank"
+              rel="noopener noreferrer"
+              label="Agende uma visita"
+              className="[&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]"
+            />
+            <CTAButton
+              href="#depoimentos"
+              label="Conheça nossa proposta pedagógica"
+              variant="secondary"
+              className="border-white/70 bg-black/20"
+            />
           </div>
         </div>
       </div>
-
-      {/* Desktop content */}
-      <div className="hidden md:flex flex-1 flex-col container mx-auto px-8 lg:px-16 pb-8">
-        <div className="flex items-center justify-between px-6 lg:px-8 pt-8 pb-6">
-          <Image
-            src="/aurora-logo.png"
-            alt="Logo Colégio Aurora"
-            width={100}
-            height={100}
-          />
-          <div className="flex flex-col items-end">
-            <span className="font-title font-extrabold uppercase leading-[0.95] text-right text-3xl lg:text-4xl bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent">
-              Matrículas<br />Abertas
-            </span>
-            <Badge variant="outline" className="mt-1.5">
-              Do G2 ao 9° ano
-            </Badge>
-          </div>
-        </div>
-
-        <div className="flex-1 grid grid-cols-2 items-center gap-10 lg:gap-14 rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#0B3B66] via-[#0164A4] to-[#3FAEBC] px-10 py-10 lg:px-14 lg:py-12 text-left">
-          <div>
-            <h1 className="font-title font-bold leading-[1.04] text-white mb-3 text-[2.5rem] lg:text-[3.25rem] max-w-xl">
-              Excelência acadêmica. Ensino bilíngue. Valores cristãos.
-            </h1>
-            <p className="text-white/70 text-left text-xl font-light leading-snug max-w-lg mb-8">
-              Da Educação Infantil ao Ensino Fundamental II.
-            </p>
-            <div className="flex flex-wrap items-start gap-4 mb-10">
-              <CTAButton
-                href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
-                target="_blank"
-                rel="noopener noreferrer"
-                label="Agende uma visita"
-                className="[&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]"
-              />
-              <CTAButton
-                href="#depoimentos"
-                label="Conheça nossa proposta pedagógica"
-                variant="secondary"
-              />
-            </div>
-          </div>
-
-          <div className="rounded-[1.75rem] bg-white/10 p-2 h-[min(58vh,520px)] min-h-[360px]">
-            <HeroSlideshow className="rounded-[1.25rem] h-full" />
-          </div>
-        </div>
-      </div>
-
     </section>
   );
 }
