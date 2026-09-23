@@ -71,10 +71,10 @@ export default function Header() {
 
         {/* CTA */}
         <Link
-          href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora"
+          href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 bg-[#16A34A] hover:bg-[#0164A4] text-white font-semibold text-sm md:text-base rounded-full px-4 py-1.5 md:px-5 md:py-2 transition-colors duration-300"
+          className="flex-shrink-0 bg-[#16A34A] hover:bg-[#15803D] text-white font-semibold text-sm md:text-base rounded-full px-4 py-1.5 md:px-5 md:py-2 transition-colors duration-300"
         >
           Fale conosco
         </Link>

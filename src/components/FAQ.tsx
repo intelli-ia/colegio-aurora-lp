@@ -66,7 +66,7 @@ export default function FAQSection() {
                 <span className="font-title font-semibold text-[15px] md:text-[17px] text-[#1C1C1C] group-hover:text-[#3FAEBC] transition-colors duration-200 leading-snug">
                   {faq.q}
                 </span>
-                <span className={`flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ${open === i ? "bg-gradient-to-br from-[#3FAEBC] to-[#0164A4] rotate-45" : "bg-gray-100 group-hover:bg-[#3FAEBC]/10"
+                <span className={`flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ${open === i ? "bg-gradient-to-br from-[#16A34A] to-[#4ADE80] rotate-45" : "bg-gray-100 group-hover:bg-[#16A34A]/10"
                   }`}>
                   <svg className={`w-3.5 h-3.5 md:w-4 md:h-4 transition-colors duration-300 ${open === i ? "text-white" : "text-[#4B4B4B]"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -104,7 +104,7 @@ export default function FAQSection() {
           <p className="text-[#4B4B4B] text-base md:text-lg mb-5 md:mb-6">
             Ainda tem dúvidas? Nossa equipe está pronta para te atender.
           </p>
-          <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Fale conosco" />
+          <CTAButton href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" label="Fale conosco" />
         </motion.div>
 
       </div>

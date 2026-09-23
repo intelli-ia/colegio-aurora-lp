@@ -36,7 +36,7 @@ export function FinalCTASection() {
             viewport={{ once: true }}
             className="flex justify-center"
           >
-            <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Agende uma visita" />
+            <CTAButton href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" label="Agende uma visita" />
           </motion.div>
         </div>
       </div>
@@ -97,7 +97,7 @@ export function FinalCTASection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <CTAButton href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora" target="_blank" rel="noopener noreferrer" label="Agende uma visita" />
+            <CTAButton href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" label="Agende uma visita" />
           </motion.div>
         </div>
       </div>

@@ -106,7 +106,7 @@ export default function TestimonialsSection() {
             A próxima história de sucesso pode ser a do seu filho.
           </p>
           <CTAButton
-            href="https://wa.me/5571997110421?text=Oi%2C%20vim%20do%20site%20e%20gostaria%20de%20conhecer%20o%20Aurora"
+            href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
             target="_blank"
             rel="noopener noreferrer"
             label="Quero ser o próximo"
