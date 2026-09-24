@@ -20,13 +20,37 @@ interface HeroSlideshowProps {
 
 export function HeroSlideshow({ className = "", interval = 4000 }: HeroSlideshowProps) {
   const [index, setIndex] = useState(0);
+  const [imagesReady, setImagesReady] = useState(false);
 
   useEffect(() => {
+    let cancelled = false;
+    let loaded = 0;
+
+    const markLoaded = () => {
+      loaded += 1;
+      if (!cancelled && loaded === SLIDES.length) setImagesReady(true);
+    };
+
+    SLIDES.forEach(({ src }) => {
+      const image = new window.Image();
+      image.onload = markLoaded;
+      image.onerror = markLoaded;
+      image.src = src;
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!imagesReady) return;
+
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % SLIDES.length);
     }, interval);
     return () => clearInterval(timer);
-  }, [interval]);
+  }, [imagesReady, interval]);
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -49,6 +73,7 @@ export function HeroSlideshow({ className = "", interval = 4000 }: HeroSlideshow
               src={SLIDES[index].src}
               alt={SLIDES[index].alt}
               fill
+              sizes="100vw"
               className="object-cover"
               priority={index === 0}
             />
