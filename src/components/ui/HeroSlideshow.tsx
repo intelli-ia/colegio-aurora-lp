@@ -5,7 +5,9 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const SLIDES = [
-  { src: "/04.png", alt: "Alunos do Colégio Aurora reunidos no pátio" },
+  { src: "/hero/IMG_4147.webp", alt: "Alunos em atividade no Colégio Aurora" },
+  { src: "/hero/IMG_4141.webp", alt: "Atividade escolar no Colégio Aurora" },
+  { src: "/hero/18E27FC6-3B46-44AC-B63D-4A330B5CFA31.webp", alt: "Vivência dos alunos no Colégio Aurora" },
   { src: "/ctas/2236656f-c922-4b31-b881-c044aff4e4c7.jpeg", alt: "Professor auxiliando aluno em atividade de sala" },
   { src: "/ctas/80bd77db-3c77-4865-8827-2d8bbb8116f1.jpeg", alt: "Aluno pintando durante atividade pedagógica" },
   { src: "/ctas/f4100ae9-4157-40f4-ad8f-c4f1c5336792.jpeg", alt: "Aluna do Colégio Aurora sorrindo com uniforme" },

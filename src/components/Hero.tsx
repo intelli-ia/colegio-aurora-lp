@@ -45,7 +45,7 @@ export default function HeroSection() {
             Valores cristãos.<br />
             Excelência acadêmica.
           </h1>
-          <p className="mb-6 max-w-xl text-base font-light leading-snug text-white/85 md:mb-8 md:text-xl">
+          <p className="mb-6 max-w-xl text-sm font-light leading-snug text-white/85 md:mb-8 md:text-xl">
             Da Educação Infantil ao Ensino Fundamental II.
           </p>
           <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-start">
