@@ -36,6 +36,7 @@ export default function Bilingue() {
                 "Material didático bilíngue",
                 "Desenvolvimento de fluência oral e escrita",
                 "Confiança para se expressar em outro idioma",
+                "Tempo integral",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-3 py-2.5">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">

@@ -17,6 +17,12 @@ const etapas = [
       "Formação acadêmica aprofundada via leitura de textos clássicos (compreensão leitora, vocabulário, pensamento crítico). Matemática pelo Método Singapura (raciocínio lógico, compreensão de conceitos, resolução de problemas).",
   },
   {
+    tag: "Tempo integral",
+    subtag: "",
+    descricao:
+      "A rotina do seu filho continua dentro de uma formação que une excelência acadêmica, formação do caráter e valores cristãos.",
+  },
+  {
     tag: "Educação Bilíngue",
     subtag: "",
     descricao:

@@ -41,7 +41,7 @@ export default function HeroSection() {
       <div className="relative z-[3] mt-auto w-full px-6 pb-12 pt-24 md:px-12 md:pb-8 lg:px-16">
         <div className="max-w-3xl text-left">
           <h1 className="mb-3 max-w-2xl font-title text-[1.75rem] font-bold leading-[1.1] text-white md:text-[2.5rem] lg:text-[3rem]">
-            Ensino bilíngue.<br />
+            Ensino bilíngue em tempo integral.<br />
             Valores cristãos.<br />
             Excelência acadêmica.
           </h1>
