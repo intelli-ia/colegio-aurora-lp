@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
 
 const etapas = [
@@ -45,6 +44,9 @@ const LAYERS = [
   "top-10 inset-x-4 md:top-12 md:inset-x-16 bg-[#3E8DCA]",
 ];
 
+const GRAIN =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
+
 export default function PorQueAurora() {
   return (
     <div className="relative bg-white pt-[3.75rem] md:pt-[4.5rem]">
@@ -57,35 +59,28 @@ export default function PorQueAurora() {
         />
       ))}
     <section id="por-que-aurora" className="relative overflow-hidden py-20 md:py-32 bg-[#5199D2] rounded-t-[3rem] md:rounded-t-[5rem]">
-      {/* Subtle dotted texture */}
+      {/* Subtle grain texture */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-60 [background-image:radial-gradient(circle,rgba(255,255,255,0.28)_1.2px,transparent_1.6px)] [background-size:22px_22px]"
+        className="pointer-events-none absolute inset-0 opacity-[0.22] mix-blend-overlay"
+        style={{ backgroundImage: GRAIN }}
       />
       <div className="container relative z-10 mx-auto px-6 md:px-16">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center mb-14 md:mb-20"
         >
           <h2 className="font-title text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] text-balance">
             Por que escolher o{" "}
             <span className="font-[family-name:var(--font-garamond),Georgia,serif] text-[1.18em] font-medium italic">Aurora</span>?
           </h2>
-        </motion.div>
+        </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6 max-w-6xl mx-auto">
           {etapas.map((item, i) => (
-            <motion.div
+            <div
               key={item.tag}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-5%" }}
-              transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
               className="flex flex-col sm:flex-row overflow-hidden rounded-2xl bg-gradient-to-br from-[#0164A4] to-[#013e69] shadow-[0_12px_30px_rgba(1,100,164,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(1,100,164,0.35)]"
             >
               <div className="relative h-52 sm:h-auto sm:w-2/5 sm:min-h-[240px] flex-shrink-0">
@@ -107,20 +102,16 @@ export default function PorQueAurora() {
                   {item.descricao}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <div
           className="flex justify-center mt-14 md:mt-20"
         >
           <CTAButton href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" label="Agende uma visita" />
-        </motion.div>
+        </div>
       </div>
     </section>
     </div>
