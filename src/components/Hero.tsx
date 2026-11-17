@@ -27,22 +27,22 @@ export default function HeroSection() {
       </div>
 
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 pb-8 pt-8 md:px-12 md:pb-10 md:pt-12 xl:px-0">
-        <header className="mx-auto mb-8 flex w-fit max-w-full items-center justify-center gap-4 md:mb-11 md:gap-8">
+        <header className="mx-auto mb-6 flex w-fit max-w-full flex-col items-center justify-center gap-3 md:mb-11 md:flex-row md:gap-8">
           <Image
             src="/aurora-logo-light.png"
             alt="Logo Colégio Aurora"
             width={687}
             height={660}
-            className="h-auto w-[80px] flex-shrink-0 md:w-[120px]"
+            className="h-auto w-[116px] flex-shrink-0 md:w-[120px]"
             priority
           />
-          <div aria-hidden className="h-14 w-px flex-shrink-0 bg-[#0164A4]/30 md:h-24" />
-          <h1 className="max-w-[18rem] text-balance text-center font-title md:max-w-[32rem] lg:max-w-[36rem] text-xl font-bold leading-[1.2] text-[#0164A4] md:text-3xl lg:text-4xl">
+          <div aria-hidden className="hidden h-24 w-px flex-shrink-0 bg-[#0164A4]/30 md:block" />
+          <h1 className="max-w-[22rem] text-balance text-center font-title md:max-w-[32rem] lg:max-w-[36rem] text-[1.875rem] font-bold leading-[1.2] text-[#0164A4] md:text-3xl lg:text-4xl">
             Excelência acadêmica e valores cristãos, em dois idiomas.
           </h1>
         </header>
 
-        <div className="relative min-h-[260px] w-full flex-1 overflow-hidden rounded-3xl md:min-h-[360px] md:rounded-[2rem]">
+        <div className="relative h-[19rem] w-full flex-none overflow-hidden rounded-3xl md:h-auto md:min-h-[360px] md:flex-1 md:rounded-[2rem]">
           <HeroBanner className="absolute inset-0 h-full w-full" />
         </div>
 

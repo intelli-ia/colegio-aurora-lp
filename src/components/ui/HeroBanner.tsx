@@ -106,7 +106,7 @@ export function HeroBanner({ className }: { className?: string }) {
           position="50% 25%"
           sizes="(min-width: 1280px) 420px, 60vw"
           accent="bg-[#FABD22]"
-          className="w-[52%] md:w-[36%] md:translate-y-2"
+          className="w-[78%] md:w-[36%] md:translate-y-2"
           priority
         />
         <BlobPhoto
@@ -116,7 +116,7 @@ export function HeroBanner({ className }: { className?: string }) {
           position="50% 30%"
           sizes="(min-width: 1280px) 320px, 40vw"
           accent="bg-[#F56800]"
-          className="w-[38%] translate-y-4 md:w-[26%] md:-translate-y-2"
+          className="hidden md:block md:w-[26%] md:-translate-y-2"
         />
       </div>
 
