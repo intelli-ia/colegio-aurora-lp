@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CTAButton } from "@/components/ui/CTAButton";
-import { TestimonialsColumn } from "@/components/ui/testimonials-columns";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -51,99 +51,99 @@ const testimonials = [
   },
 ];
 
-const firstColumn = testimonials.slice(0, 4);
-const secondColumn = testimonials.slice(4, 8);
-const thirdColumn = testimonials.slice(8, 11);
+type Variant = "light" | "dark" | "blue";
+
+// Alterna variações de cor e alinhamento (texto colado no rodapé do card) para dar ritmo ao carrossel
+const RHYTHM: { variant: Variant; bottom?: boolean }[] = [
+  { variant: "dark" },
+  { variant: "light", bottom: true },
+  { variant: "blue" },
+  { variant: "light" },
+  { variant: "dark", bottom: true },
+  { variant: "light" },
+  { variant: "blue", bottom: true },
+  { variant: "light" },
+];
+
+const tones = {
+  light: { box: "bg-[#F56800] border-[#F56800]", text: "text-white", name: "text-[#012f52]" },
+  dark: { box: "bg-[#013e69] border-[#013e69]", text: "text-white/95", name: "text-[#9ACBE8]" },
+  blue: { box: "bg-[#0164A4] border-[#0164A4]", text: "text-white", name: "text-white" },
+} as const;
+
+function Card({ quote, author, index }: { quote: string; author: string; index: number }) {
+  const { variant, bottom } = RHYTHM[index % RHYTHM.length];
+  const tone = tones[variant];
+  // Texto o maior possível: só os depoimentos longos reduzem a fonte, para caber sem cortar
+  const len = quote.length;
+  const size =
+    len > 450 ? "text-sm sm:text-base" : len > 300 ? "text-base sm:text-lg" : len > 180 ? "text-lg sm:text-xl" : "text-xl sm:text-2xl";
+  return (
+    <div
+      className={cn(
+        "mx-1 flex h-[30rem] w-72 shrink-0 flex-col overflow-hidden rounded-3xl border p-6 sm:mx-2 sm:h-[32rem] sm:w-[23rem] sm:p-9",
+        bottom ? "justify-end" : "justify-between",
+        tone.box
+      )}
+    >
+      <blockquote className={cn("leading-relaxed", tone.text, size)}>{quote}</blockquote>
+      <p className={cn("mt-5 text-base font-semibold", tone.name)}>{author}</p>
+    </div>
+  );
+}
+
+// Duas metades iguais: o loop (-50%) é contínuo e a cópia fica oculta aos leitores de tela
+function Half({ hidden = false }: { hidden?: boolean }) {
+  return (
+    <div className="flex" aria-hidden={hidden || undefined}>
+      {testimonials.map((t, i) => (
+        <Card key={t.author} quote={t.quote} author={t.author} index={i} />
+      ))}
+    </div>
+  );
+}
 
 export default function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="relative w-full py-16 md:py-36 bg-white overflow-hidden">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-[#3FAEBC]/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+    <section id="depoimentos" className="relative w-full overflow-hidden bg-white py-16 md:py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="mb-8 px-6 text-center md:mb-10"
+      >
+        <h2 className="mx-auto max-w-5xl text-balance font-[family-name:var(--font-garamond),Georgia,serif] text-[2.5rem] font-medium leading-[1.1] text-[#0164A4] md:text-6xl lg:text-7xl">
+          O que as nossas famílias dizem{" "}
+          <span className="italic text-[#3F8DBB]">do Aurora</span>
+        </h2>
+      </motion.div>
 
-      <div className="container mx-auto px-6 md:px-16 relative z-10">
-
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center max-w-5xl mx-auto mb-12 md:mb-16"
-        >
-          <h2 className="font-title text-3xl md:text-5xl font-bold text-[#1C1C1C] leading-tight">
-            O que as nossas famílias
-            <span className="block mt-2">
-              dizem do{" "}
-              <span className="bg-gradient-to-r from-[#3FAEBC] to-[#0164A4] bg-clip-text text-transparent">
-                Aurora
-              </span>
-            </span>
-          </h2>
-        </motion.div>
-
-        {/* Mobile: horizontal looping carousel */}
-        <div className="-mx-6 mb-12 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] md:hidden">
-          <motion.div
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-            className="flex w-max gap-4 pl-4"
-          >
-            {[...testimonials, ...testimonials].map(({ quote, author }, i) => (
-              <div
-                key={i}
-                className="w-[78vw] max-w-xs flex-shrink-0 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
-              >
-                <div className="mb-4 flex gap-1">
-                  {[...Array(5)].map((_, s) => (
-                    <svg key={s} className="h-3.5 w-3.5 text-[#FABD22]" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="mb-5 text-sm leading-relaxed text-[#4B4B4B]">"{quote}"</p>
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#3FAEBC]/20 to-[#3FAEBC]/10">
-                    <span className="text-sm font-bold text-[#3FAEBC]">{author.charAt(0)}</span>
-                  </div>
-                  <p className="text-sm font-semibold leading-tight text-[#1C1C1C]">{author}</p>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+      <div className="relative flex overflow-hidden [@media(pointer:coarse)]:pointer-events-none [@media(pointer:coarse)]:select-none">
+        <div className="flex animate-marquee [animation-duration:100s] motion-reduce:animate-none">
+          <Half />
+          <Half hidden />
         </div>
-
-        {/* Desktop: scrolling columns */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="hidden md:flex justify-center gap-5 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)] max-h-[480px] md:max-h-[600px] overflow-hidden mb-12 md:mb-16"
-        >
-          <TestimonialsColumn testimonials={firstColumn} duration={22} />
-          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={26} reverse />
-          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={22} />
-        </motion.div>
-
-        {/* Tagline + CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <p className="text-xl md:text-3xl font-bold text-[#1C1C1C] mb-6 md:mb-8">
-            A próxima história de sucesso pode ser a do seu filho.
-          </p>
-          <CTAButton
-            href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
-            target="_blank"
-            rel="noopener noreferrer"
-            label="Quero ser o próximo"
-          />
-        </motion.div>
       </div>
+
+      {/* Tagline + CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mt-12 px-6 text-center md:mt-16"
+      >
+        <p className="mb-6 text-xl font-bold text-[#0164A4] md:mb-8 md:text-3xl">
+          A próxima história de sucesso pode ser a do seu filho.
+        </p>
+        <CTAButton
+          href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+          target="_blank"
+          rel="noopener noreferrer"
+          label="Quero ser o próximo"
+        />
+      </motion.div>
     </section>
   );
 }

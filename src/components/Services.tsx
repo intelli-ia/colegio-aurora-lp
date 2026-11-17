@@ -28,7 +28,7 @@ const steps = [
     number: "04",
     title: "Experimente o que o seu\nfilho vai viver aqui",
     body: "Mais do que ver as instalações, você vai sentir na prática o ambiente, nosso compromisso com a educação do seu filho e as vivências que formam o dia a dia dos nossos alunos.",
-    image: "/04.png",
+    image: "/ctas/80bd77db-3c77-4865-8827-2d8bbb8116f1.jpeg",
   },
 ];
 
@@ -54,7 +54,7 @@ function StepCard({
       <span className="font-title font-bold text-[#1C1C1C]/10 text-[48px] md:text-[80px] leading-none select-none">
         {step.number}
       </span>
-      <h3 className="font-title font-bold text-[#1C1C1C] text-[22px] md:text-[30px] lg:text-[36px] leading-snug mb-4 whitespace-pre-line">
+      <h3 className="font-title font-bold text-[#1C1C1C] text-[18px] md:text-[22px] lg:text-[26px] leading-snug mb-4 whitespace-pre-line">
         {step.title}
       </h3>
       <p className="text-[#1C1C1C]/70 text-[14px] md:text-[17px] leading-relaxed">
@@ -145,7 +145,7 @@ function MobileStepCard({
         <span className="font-title font-bold text-[#1C1C1C]/10 text-[40px] leading-none select-none">
           {step.number}
         </span>
-        <h3 className="font-title font-bold text-[#1C1C1C] text-[22px] leading-snug mb-3 whitespace-pre-line">
+        <h3 className="font-title font-bold text-[#1C1C1C] text-[18px] leading-snug mb-3 whitespace-pre-line">
           {step.title}
         </h3>
         {step.image ? (

@@ -14,13 +14,13 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
-      <SocialProof />
-      <Manifesto />
       <PorQueAurora />
+      <Manifesto />
       <Services />
       <Bilingue />
       <Gallery />
       <About />
+      <SocialProof />
       <TestimonialsScreenshots />
       <FAQSection />
       <FinalCTASection />

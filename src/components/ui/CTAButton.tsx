@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface CTAButtonProps {
   href: string;
@@ -35,7 +36,7 @@ export function CTAButton({
         href={href}
         target={target}
         rel={rel}
-        className={`group inline-flex items-center justify-center rounded-full border border-white/40 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/10 ${sizeClasses} ${className}`}
+        className={cn("group inline-flex items-center justify-center rounded-full border border-white/40 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/10", sizeClasses, className)}
       >
         <span>{label}</span>
         <ArrowRight className={`transition-transform duration-300 group-hover:translate-x-1 ${size === "sm" ? "h-3.5 w-3.5" : "h-4 w-4"}`} />

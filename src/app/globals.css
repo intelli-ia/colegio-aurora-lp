@@ -60,3 +60,12 @@ body {
 section[id] {
   scroll-margin-top: 80px;
 }
+
+@theme {
+  --animate-marquee: marquee 90s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}

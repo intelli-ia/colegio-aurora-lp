@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { CTAButton } from "@/components/ui/CTAButton";
 
 export default function LocalizacaoSection() {
   return (
@@ -55,6 +56,22 @@ export default function LocalizacaoSection() {
         >
           R. dos Prazeres, 363 — Recreio Ipitanga, Lauro de Freitas — BA, 42700-290
         </motion.p>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-8 md:mt-10"
+        >
+          <CTAButton
+            href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+            target="_blank"
+            rel="noopener noreferrer"
+            label="Agende uma visita"
+          />
+        </motion.div>
 
       </div>
     </section>

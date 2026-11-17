@@ -2,67 +2,69 @@
 
 import Image from "next/image";
 import { CTAButton } from "@/components/ui/CTAButton";
-import { Badge } from "@/components/ui/badge";
-import { HeroSlideshow } from "@/components/ui/HeroSlideshow";
+import { HeroBanner } from "@/components/ui/HeroBanner";
 
 export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-[#07152c] md:min-h-screen"
+      className="relative flex min-h-[100svh] w-full flex-col bg-white md:min-h-screen"
     >
-      <div className="absolute inset-0 z-0">
-        <HeroSlideshow className="h-full w-full" />
+      {/* Marquee strip */}
+      <div className="w-full overflow-hidden bg-[#0164A4] py-2.5 md:py-3" aria-label="Matrículas abertas 2027 em Lauro de Freitas">
+        <div className="flex w-max animate-marquee" aria-hidden>
+          {[0, 1].map((group) => (
+            <div key={group} className="flex flex-shrink-0 items-center">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <span key={i} className="flex items-center font-title text-sm font-extrabold uppercase tracking-[0.15em] text-white md:text-base">
+                  <span className="px-5 md:px-8">{i % 2 === 0 ? "Matrículas abertas 2027" : "Lauro de Freitas"}</span>
+                  <span className="text-[#FABD22]">&#9733;</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Gradient overlay keeps the copy readable over every slide. */}
-      <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-black/35 via-black/10 to-black/80" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[72%] bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
-
-      <header className="relative z-10 flex w-full items-center justify-between px-6 pt-8 pb-6 md:px-12 md:pt-10 lg:px-16">
-        <Image
-          src="/aurora-logo.png"
-          alt="Logo Colégio Aurora"
-          width={150}
-          height={150}
-          className="h-[76px] w-[76px] object-contain md:h-[140px] md:w-[140px]"
-          priority
-        />
-        <div className="flex flex-col items-end">
-          <span className="text-right font-title text-3xl font-extrabold uppercase leading-[0.95] text-white md:text-4xl">
-            Matrículas<br />Abertas
-          </span>
-          <Badge variant="outline" className="mt-1.5 border-white/50 bg-black/20 text-white">
-            Do G2 ao 9° ano
-          </Badge>
-        </div>
-      </header>
-
-      <div className="relative z-[3] mt-auto w-full px-6 pb-12 pt-24 md:px-12 md:pb-8 lg:px-16">
-        <div className="max-w-3xl text-left">
-          <h1 className="mb-3 max-w-2xl font-title text-[1.75rem] font-bold leading-[1.1] text-white md:text-[2.5rem] lg:text-[3rem]">
-            Ensino bilíngue em tempo integral.<br />
-            Valores cristãos.<br />
-            Excelência acadêmica.
+      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 pb-8 pt-8 md:px-12 md:pb-10 md:pt-12 xl:px-0">
+        <header className="mx-auto mb-8 flex w-fit max-w-full items-center justify-center gap-4 md:mb-11 md:gap-8">
+          <Image
+            src="/aurora-logo-light.png"
+            alt="Logo Colégio Aurora"
+            width={687}
+            height={660}
+            className="h-auto w-[80px] flex-shrink-0 md:w-[120px]"
+            priority
+          />
+          <div aria-hidden className="h-14 w-px flex-shrink-0 bg-[#0164A4]/30 md:h-24" />
+          <h1 className="max-w-[18rem] text-balance text-center font-title md:max-w-[32rem] lg:max-w-[36rem] text-xl font-bold leading-[1.2] text-[#0164A4] md:text-3xl lg:text-4xl">
+            Excelência acadêmica e valores cristãos, em dois idiomas.
           </h1>
-          <p className="mb-6 max-w-xl text-sm font-light leading-snug text-white/85 md:mb-8 md:text-xl">
-            Da Educação Infantil ao Ensino Fundamental II.
-          </p>
-          <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-start">
-            <CTAButton
-              href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
-              target="_blank"
-              rel="noopener noreferrer"
-              label="Agende uma visita"
-              className="[&>div:first-child]:from-[#16A34A] [&>div:first-child]:to-[#4ADE80]"
-            />
-            <CTAButton
-              href="#depoimentos"
-              label="Conheça nossa proposta pedagógica"
-              variant="secondary"
-              className="border-white/70 bg-black/20"
-            />
-          </div>
+        </header>
+
+        <div className="relative min-h-[260px] w-full flex-1 overflow-hidden rounded-3xl md:min-h-[360px] md:rounded-[2rem]">
+          <HeroBanner className="absolute inset-0 h-full w-full" />
+        </div>
+
+        <div className="mt-6 flex flex-col items-center md:mt-8">
+          <span className="text-center font-title text-3xl font-extrabold uppercase leading-[0.95] text-[#0164A4] md:text-4xl">
+            Matrículas Abertas
+          </span>
+        </div>
+
+        <div className="mt-6 flex w-full flex-col items-stretch justify-center gap-4 self-center sm:w-auto sm:flex-row sm:items-center md:mt-8">
+          <CTAButton
+            href="https://wa.me/5571981262448?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+            target="_blank"
+            rel="noopener noreferrer"
+            label="Agende uma visita"
+          />
+          <CTAButton
+            href="#depoimentos"
+            label="Conheça nossa proposta pedagógica"
+            variant="secondary"
+            className="border-[#0164A4]/40 text-[#0164A4] hover:border-[#0164A4] hover:bg-[#0164A4]/10"
+          />
         </div>
       </div>
     </section>
